@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+	<div class="container">
+		<div class="row">
+			<div class="col-11"></div>
+			<div class="col-1 mt-4">				
+				<img src="trash.png" class="w-75 trash" style="position: absolute; margin-top: 0px; transition: 1s;">
+				<div class="font-weight-bold summ  bg-primary py-1 px-1 rounded" style="position: absolute; margin-left: 55% ">0</div>
+			</div>
+		</div>	
+		<div class="col-12">
+			<div class="row">
+				<div class="col-3">
+					<img src="jacket2.png" class="w-75">
+					<p>1000руб</p>
+					<button class="btn btn-success btn_1000">Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket2.png" class="w-75">
+					<p>1000руб</p>
+					<button class="btn btn-success btn_1000">Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket2.png" class="w-75">
+					<p>1000руб</p>
+					<button class="btn btn-success btn_1000">Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket2.png" class="w-75">
+					<p>1000руб</p>
+					<button class="btn btn-success btn_1000">Купить</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<img src="jacket3.png" class="w-75">
+					<p>2000 рублей</p>
+					<button class="btn btn-success btn_2000"> Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket3.png" class="w-75">
+					<p>2000 рублей</p>
+					<button class="btn btn-success btn_2000"> Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket3.png" class="w-75">
+					<p>2000 рублей</p>
+					<button class="btn btn-success btn_2000"> Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket3.png" class="w-75">
+					<p>2000 рублей</p>
+					<button class="btn btn-success btn_2000"> Купить</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<img src="jacket4.png" class="w-75">
+					<p>3000 рублей</p>
+					<button class="btn btn-success btn_3000">Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket4.png" class="w-75">
+					<p>3000 рублей</p>
+					<button class="btn btn-success btn_3000">Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket4.png" class="w-75">
+					<p>3000 рублей</p>
+					<button class="btn btn-success btn_3000">Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket4.png" class="w-75">
+					<p>3000 рублей</p>
+					<button class="btn btn-success btn_3000">Купить</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+let btn_1000= document.querySelectorAll(".btn_1000");
+let btn_2000= document.querySelectorAll(".btn_2000");
+let btn_3000= document.querySelectorAll(".btn_3000");
+
+let summ_div= document.querySelector(".summ");	
+let summa=0;
+
+let anima = function() { 
+	document.querySelector(".trash").style.marginTop="0px";
+}
+
+let func = function(arg) { //функция с аргументом
+	alert(arg)
+	summa=summa+arg;
+	summ_div.innerHTML = summa;
+	document.querySelector(".trash").style.marginTop="-20px";
+	setTimeout(anima,1500)
+}
+
+for(let i = 0; i<4; i = i + 1){
+		btn_1000[i].onclick = function(){		
+			func(1000)
+		}
+}
+
+for(let i = 0; i<4; i = i + 1){
+		btn_2000[i].onclick = function(){
+			func(2000)
+		}
+}
+
+for(let i = 0; i<4; i = i + 1){
+		btn_3000[i].onclick = function(){
+			func(3000)
+		}
+}
+
+	</script>
+</body>
+</html>
